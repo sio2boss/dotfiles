@@ -1,0 +1,11 @@
+[alias]
+	hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+[pull]
+	ff = only
+
+[includeIf "gitdir:~/.local/share/chezmoi/"]
+  path = ~/Projects/Personal/.gitconfig-personal
+[includeIf "gitdir:~/Projects/Personal/"]
+  path = ~/Projects/Personal/.gitconfig-personal
+[includeIf "gitdir:~/Projects/Work/"]
+  path = ~/Projects/Work/.gitconfig-work
